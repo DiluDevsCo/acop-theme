@@ -1,0 +1,6 @@
+.block-image-text-and-buttons{
+    --bg-gradient: white;
+}
+.activate_gradient{
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-gradient) 60%);
+}

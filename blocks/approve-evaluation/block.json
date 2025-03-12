@@ -1,0 +1,15 @@
+{
+	"name": "sculapp/approve-evaluation",
+	"title": "Examen de admisión",
+	"description": "Superación del examen de admisión",
+	"style": ["approve-evaluation-css"],
+	"script": ["approve-evaluation-js"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "approve-evaluation.php"
+	}
+}

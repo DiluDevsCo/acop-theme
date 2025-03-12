@@ -1,0 +1,14 @@
+{
+	"name": "fr/icon-text",
+	"title": "Icon and text",
+	"description": "icon and text",
+	"style": ["icon-text-css"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["texto", "iconos"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "icon-text.php"
+	}
+}

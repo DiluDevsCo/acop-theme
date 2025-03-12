@@ -1,0 +1,15 @@
+{
+	"name": "sculapp/popup",
+	"title": "popup",
+	"description": "popup",
+	"style": ["popup-css"],
+	"script": ["popup-js"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["popup", "pop", "up", "modal"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "popup.php"
+	}
+}

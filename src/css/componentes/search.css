@@ -1,0 +1,36 @@
+#ajaxsearchliteres1 {
+  border-radius: 1rem;
+
+  &.wpdreams_asl_results .results img.asl_image {
+    border-radius: 1rem;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  &.asl_r .results .item .asl_content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &.asl_r .results .item {
+    border-radius: 1rem;
+    background-color: rgba(176, 128, 215, 0.1);
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease-out;
+  }
+  &.asl_r .results .item:hover {
+    background-color: rgba(176, 128, 215, 0.2);
+  }
+
+  &.asl_r .results .item:after {
+    content: "";
+    display: none;
+  }
+
+  &div.asl_r .results .item .asl_content h3,
+  &.asl_r .results .item .asl_content h3 a {
+    font-size: 13px;
+    line-height: 1;
+    color: #000000;
+  }
+}

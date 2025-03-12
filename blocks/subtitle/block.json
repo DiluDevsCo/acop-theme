@@ -1,0 +1,15 @@
+{
+	"name": "subtitle",
+	"title": "subtitle",
+	"description": "subtitle",
+	"style": ["subtitle-css"],
+	"script": ["subtitle-js"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["subtitle", "sub", "title", "modal"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "subtitle.php"
+	}
+}

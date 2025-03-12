@@ -1,0 +1,17 @@
+{
+	"name": "sculapp/image-text-and-buttons",
+	"title": "Imagen texto y botones",
+	"description": "Muestra cursos por ver por usuario",
+	"style": ["image-text-and-buttons-css"],
+  "editorStyle": ["image-text-and-buttons-css","image-text-and-buttons-css"],
+  "script": ["image-text-and-buttons-js"],
+  "editorScript": ["image-text-and-buttons-js"],
+	"category": "formatting",
+	"icon": "admin-comments",
+  "version":  "1.0.0",
+	"keywords": ["imagen", "texto", "boton", "botones", "image", "text", "button", "buttons"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "image-text-and-buttons.php"
+	}
+}

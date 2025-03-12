@@ -1,0 +1,48 @@
+{
+    "key": "group_64c2d83c5eb24",
+    "title": "Bloque: Simulacros",
+    "fields": [
+        {
+            "key": "field_64c2e1eb31248",
+            "label": "Membresias que pueden acceder al simulacro",
+            "name": "roles",
+            "aria-label": "",
+            "type": "acf_roles_chooser",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": [],
+            "return_format": "value",
+            "multiple": 1,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "choices": [],
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/simulations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1696280652
+}

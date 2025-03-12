@@ -1,0 +1,15 @@
+{
+	"name": "fr/purchase",
+	"title": "Purchase",
+	"description": "slider home page",
+	"style": ["purchase-css", "swiper-css"],
+	"script": ["purchase-js", "swiper"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "purchase.php"
+	}
+}

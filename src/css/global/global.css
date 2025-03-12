@@ -1,0 +1,132 @@
+.container-fluid {
+  @apply max-w-screen-2xl px-4 mx-auto sm:px-6 lg:px-8;
+}
+.full-width{
+  @apply w-auto -mx-4 sm:-mx-6 lg:-mx-8;
+}
+
+.sculap-ld-left {
+  flex: 0 0 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+@media (max-width: 1024px) {
+  .sculap-ld-left {
+    flex: 0 0 215px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sculap-ld-left {
+    display: none;
+  }
+}
+
+.sculap-ld-left .ld-brand-logo a,
+.sculap-ld-left .ld-brand-logo img {
+  display: block;
+}
+
+.sculap-ld-left a {
+  font-weight: bold;
+}
+
+.learndash-wrapper .ld-focus .ld-focus-header .sculap-ld-left .ld-brand-logo {
+  max-width: 6rem;
+  padding: 0;
+  background-color: transparent;
+}
+
+.et_pb_module .learndash-wrapper .ld-button {
+  max-width: none;
+}
+
+.sculapp-regresar {
+  background: #3ab6ce;
+  color: white;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 2px 10px;
+}
+
+.sculapp__incluye ul {
+  padding-left: 0 !important;
+}
+.sculapp-regresar:hover {
+  background-color: #267989;
+}
+
+.sculapp-course-content-summary {
+  color: black;
+}
+.sculapp-course-content-summary h3 {
+  color: black !important;
+  text-align: left;
+  margin-bottom: 0.6rem;
+}
+.sculapp-course-content-summary ul {
+  padding: 0;
+}
+.sculapp-total-inscritos {
+  display: flex;
+  align-items: center;
+}
+.sculapp-total-inscritos svg {
+  margin-right: 1rem;
+}
+.sculapp-course-content-summary li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.sculapp-course-content-summary .et-pb-icon {
+  font-size: 18px;
+  color: #333335;
+  font-family: ETmodules;
+  font-weight: 400;
+}
+.sculapp-course-content-summary .et-pb-icon.fa {
+  font-size: 18px;
+  color: #333335;
+  font-family: FontAwesome !important;
+  font-weight: 400;
+}
+
+.et-boc {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 782px) {
+  .admin-bar [data-sculapp-header] {
+    top: 32px;
+  }
+}
+
+.almus-container #main-content{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.almus-container #main-content.bg-page{
+  padding-left: initial;
+  padding-right: initial;
+}
+
+.bg-page, .almus-container{   
+  background: #001C30 !important;
+}
+
+.bg-entry{
+  background: white !important;
+}

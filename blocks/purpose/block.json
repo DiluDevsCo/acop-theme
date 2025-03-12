@@ -1,0 +1,15 @@
+{
+	"name": "purpose",
+	"title": "purpose",
+	"description": "purpose",
+	"style": ["purpose-css"],
+	"script": ["purpose-js"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["purpose", "pur", "pose", "modal"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "purpose.php"
+	}
+}

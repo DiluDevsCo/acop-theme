@@ -1,0 +1,5 @@
+---
+deployments:
+  tasks:
+    - npm install  # This installs the required npm dependencies
+    - npm run build  # This runs the build process (update with your actual build script)

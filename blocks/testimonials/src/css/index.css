@@ -1,0 +1,4 @@
+[data-video-carrousel] .swiper-button-prev::after, [data-video-carrousel] .swiper-button-next::after {
+  content: none;
+  display: none;
+}

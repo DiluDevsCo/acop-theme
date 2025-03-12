@@ -1,0 +1,4 @@
+[data-cards-carrousel] .swiper-button-prev::after, [data-cards-carrousel] .swiper-button-next::after {
+    content: none;
+    display: none;
+  }

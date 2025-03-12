@@ -1,0 +1,70 @@
+{
+    "key": "group_647ff6e499fd6",
+    "title": "Product: Configuraciones Sculapp",
+    "fields": [
+        {
+            "key": "field_647ff7dab5913",
+            "label": "Asignar rol de usuario",
+            "name": "roles",
+            "aria-label": "",
+            "type": "acf_roles_chooser",
+            "instructions": "Selecciona el rol que se le debe asignar al usuario que compre este curso.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "choices": [],
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_647ff6e5b5912",
+            "label": "Tiempo de subscripción (en dias)",
+            "name": "access_period_in_days",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Agrega el numero de días en que la subscripción será válida.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1695907326
+}

@@ -1,0 +1,23 @@
+/*!
+ Theme Name:   Acop Divi Child Theme
+ Theme URI:    https://www.acop.com.co/
+ Description:  Child Theme for Divi
+ Author:       Almus
+ Author URI:   https://www.acop.com.co/
+ Template:     Divi
+ Version:      1.1.1
+*/
+
+/*****Add any custom CSS below this line*****/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./global/global.css";
+@import "./global/animations.css";
+@import "./componentes/header.css";
+@import "./componentes/buttons.css";
+@import "./componentes/search.css";
+@import "./componentes/footer.css";
+

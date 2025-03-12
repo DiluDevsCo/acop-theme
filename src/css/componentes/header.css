@@ -1,0 +1,40 @@
+.main-header {
+  .asl_w_container {
+    width: 200px;
+    margin: 0;
+    transition: width 0.3s ease-out;
+  }
+
+  .asl_w_container:focus-within {
+    width: 100%;
+  }
+
+  .probox div.asl_simple-circle {
+    border-color: #000000 !important;
+  }
+
+  div.asl_m.asl_w {
+    border: 1px solid #000000 !important;
+  }
+  div.asl_w .probox .promagnifier .innericon svg {
+    fill: #000000;
+  }
+  #ajaxsearchlite1 .probox,
+  div.asl_w .probox {
+    padding: 4px 8px;
+    background-color: #fff;
+  }
+}
+
+/* Agrega el espacio necesario cuando la barra de admin esta activa para que el header no quede por debajo */
+@media (min-width: 782px) {
+  .admin-bar [data-sculapp-header] {
+    top: 32px;
+  }
+}
+/* To remove padding at the top of the main container added by Divi 
+TODO: Remove when Divi is remvoved
+*/
+.app-header.et_fixed_nav.et_show_nav #page-container {
+  padding-top: 0 !important;
+}

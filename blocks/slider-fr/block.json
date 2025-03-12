@@ -1,0 +1,15 @@
+{
+	"name": "slider-fr",
+	"title": "slider-fr",
+	"description": "slider-fr",
+	"style": ["slider-fr-css"],
+	"script": ["slider-fr-js"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["slider-fr", "slider", "fr", "modal"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "slider-fr.php"
+	}
+}

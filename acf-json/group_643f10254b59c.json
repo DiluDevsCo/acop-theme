@@ -1,0 +1,290 @@
+{
+    "key": "group_643f10254b59c",
+    "title": "Bloque: Calendario",
+    "fields": [
+        {
+            "key": "field_645b9f4ea14fa",
+            "label": "Tiempo de estudio",
+            "name": "study_time",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Agregar tiempo de estudio",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6481de88a1b93",
+                    "label": "Activado",
+                    "name": "disable_button",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_645b9f4ea14fa"
+                },
+                {
+                    "key": "field_645b9f93532b0",
+                    "label": "Titulo",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_645b9f4ea14fa"
+                },
+                {
+                    "key": "field_6449a38ba7481",
+                    "label": "Meses",
+                    "name": "months",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "min": 0,
+                    "max": 11,
+                    "collapsed": "",
+                    "button_label": "Agregar mes",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_645b9f4ea14fa",
+                    "sub_fields": [
+                        {
+                            "key": "field_6449a394a7482",
+                            "label": "Titulo del mes",
+                            "name": "label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6449a38ba7481"
+                        },
+                        {
+                            "key": "field_6449a2aca8b0e",
+                            "label": "Dias",
+                            "name": "days",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "min": 0,
+                            "max": 31,
+                            "collapsed": "",
+                            "button_label": "Agregar dia",
+                            "rows_per_page": 20,
+                            "parent_repeater": "field_6449a38ba7481",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6449a2aca8b0f",
+                                    "label": "Titulo del dia",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_6449a2aca8b0e"
+                                },
+                                {
+                                    "key": "field_6449a2aca8b10",
+                                    "label": "Topics",
+                                    "name": "topics",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "block",
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Agregar Tema",
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_6449a2aca8b0e",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6449a2aca8b11",
+                                            "label": "Topic",
+                                            "name": "topic",
+                                            "aria-label": "",
+                                            "type": "post_object",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "post_type": [
+                                                "sfwd-topic"
+                                            ],
+                                            "post_status": "",
+                                            "taxonomy": "",
+                                            "return_format": "object",
+                                            "multiple": 0,
+                                            "allow_null": 0,
+                                            "ui": 1,
+                                            "parent_repeater": "field_6449a2aca8b10"
+                                        },
+                                        {
+                                            "key": "field_645d8d7bd918a",
+                                            "label": "Url Personalizada",
+                                            "name": "url",
+                                            "aria-label": "",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "parent_repeater": "field_6449a2aca8b10"
+                                        },
+                                        {
+                                            "key": "field_645d8e25cb7fc",
+                                            "label": "Nombre",
+                                            "name": "label",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_6449a2aca8b10"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_64beb290812be",
+                    "label": "Disabled Message",
+                    "name": "disabled_message",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Disponible próximamente",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_645b9f4ea14fa"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "sculapp\/calendario"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1690219202
+}
