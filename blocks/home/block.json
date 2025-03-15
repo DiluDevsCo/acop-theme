@@ -1,0 +1,14 @@
+{
+	"name": "acop/home",
+	"title": "Home",
+	"description": "Home Block",
+	"style": ["home-css"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "home.php"
+	}
+}

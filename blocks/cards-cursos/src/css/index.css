@@ -1,8 +1,0 @@
-.cards-cursos a {
-    --color: #fff;
-}
-
-.cards-cursos p {
-    color: var(--color);
-    padding: 0;
-}

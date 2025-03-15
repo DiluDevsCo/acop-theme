@@ -34,42 +34,42 @@ if (!is_page_template('page-template-blank.php')) : ?>
           <ul class="flex mt-2 p-0 gap-4 items-center flex-wrap">
             <li><a href="https://www.facebook.com/Cursofuturosresidentes/" target="_blank" title="facebook">
                 <?php
-                fr_render_icon('facebook');
+                acop_render_icon('facebook');
                 ?>
               </a></li>
             <li><a href="https://www.tiktok.com/@cursofuturosresidentes" target="_blank" title="tiktok">
                 <?php
-                fr_render_icon('tiktok');
+                acop_render_icon('tiktok');
                 ?>
               </a></li>
             <li><a href="https://instagram.com/cursofuturosresidentes" target="_blank" title="instagram">
                 <?php
-                fr_render_icon('instagram');
+                acop_render_icon('instagram');
                 ?>
               </a></li>
             <li><a href="https://web.whatsapp.com/send?phone=573012555516" target="_blank" title="whatsapp">
                 <?php
-                fr_render_icon('whatsapp');
+                acop_render_icon('whatsapp');
                 ?>
               </a></li>
             <li><a href="https://youtube.com/channel/UCrdM1faIVWia5GzwNB0_y9w" target="_blank" title="youtube">
                 <?php
-                fr_render_icon('youtube');
+                acop_render_icon('youtube');
                 ?>
               </a></li>
             <li><a href="https://www.linkedin.com/company/cursofuturosresidentes" target="_blank" title="linkedin">
                 <?php
-                fr_render_icon('linkedin');
+                acop_render_icon('linkedin');
                 ?>
               </a></li>
-            <li><a href="https://x.com/CursoFR" target="_blank" title="x">
+            <li><a href="https://x.com/CursoACOPFR" target="_blank" title="x">
                 <?php
-                fr_render_icon('x');
+                acop_render_icon('x');
                 ?>
               </a></li>
             <li><a href="https://t.me/ComunidadFR" target="_blank" title="telegram">
                 <?php
-                  fr_render_icon('telegram');
+                  acop_render_icon('telegram');
                 ?>
               </a></li>
           </ul>

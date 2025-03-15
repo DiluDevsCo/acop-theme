@@ -1,5 +1,5 @@
 <?php
-function fr_render_icon($icon, $classes = 'w-5 h-5', $return = false) {
+function acop_render_icon($icon, $classes = 'w-5 h-5', $return = false) {
   ob_start();
 switch ($icon):
 case 'academic-cap':

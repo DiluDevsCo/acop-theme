@@ -18,7 +18,7 @@ function sculapp_add_custom_body_classes($classes) {
   if ($header_enabled) {
     $classes[] = 'sculapp-header';
   }
-  $classes[] = 'page-fr';
+  $classes[] = 'acop';
   return $classes;
 }
 
@@ -29,6 +29,6 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'sculapp_cart_count_fragments',
 add_filter('admin_body_class', 'sculapp_add_admin_body_class', 10,1); 
 
 function sculapp_add_admin_body_class($classes) {
-  $classes .= ' page-fr';
+  $classes .= ' acop';
   return $classes;
 }
