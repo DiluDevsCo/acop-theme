@@ -35,6 +35,18 @@ function register_acf_blocks()
         error_log('No se pudo registrar el bloque');
     }
 
-    // END: benefits-section
+    // END: interest-section
+
+    // START: interest-section
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/interest-section');
+    $version = get_block_version('interest-section');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('interest-section-css', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: interest-section
     
 }
