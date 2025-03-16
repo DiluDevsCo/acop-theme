@@ -1,11 +1,11 @@
 {
     "key": "group_67d70300dc1d5",
-    "title": "Interest-section",
+    "title": "Sección de interés",
     "fields": [
         {
             "key": "field_67d703015b70f",
             "label": "title",
-            "name": "title",
+            "name": "interest_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -47,7 +47,7 @@
                 {
                     "key": "field_67d703685b711",
                     "label": "Subtitulo",
-                    "name": "subtitle",
+                    "name": "interest_subtitle",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -68,7 +68,7 @@
                 {
                     "key": "field_67d703765b712",
                     "label": "description",
-                    "name": "description",
+                    "name": "interest_description",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -89,7 +89,7 @@
                 {
                     "key": "field_67d703805b713",
                     "label": "imagen",
-                    "name": "image",
+                    "name": "interest_image",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -100,7 +100,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -114,8 +114,8 @@
                 },
                 {
                     "key": "field_67d703a55b714",
-                    "label": "Imagen hacia la izquierda ?",
-                    "name": "direction_left",
+                    "label": "Imagen hacia la derecha ?",
+                    "name": "interest_direction",
                     "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
@@ -127,10 +127,10 @@
                         "id": ""
                     },
                     "message": "",
-                    "default_value": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": "",
+                    "default_value": 1,
+                    "ui_on_text": "si",
+                    "ui_off_text": "no",
+                    "ui": 1,
                     "parent_repeater": "field_67d703325b710"
                 }
             ]
@@ -154,5 +154,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742144627
+    "modified": 1742146802
 }

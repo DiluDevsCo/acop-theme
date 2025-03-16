@@ -1,56 +1,27 @@
 <?php
-$title = get_field('benefits_title');
-$description = get_field('benefits_description');
-$main_image = get_field('benefits_image');
-$bg_image = get_field('benefits_bg');
-$button = get_field('button');
+$title = get_field('interest_title');
+$data_interests = get_field('array_interest');
 
 ?>
 
-<div class="benefits-outer-wrapper full-width">
- <section class="benefits-section">
-  <?php if ($bg_image): ?>
-   <img
-    src="<?php echo esc_url($bg_image['url']); ?>"
-    alt="<?php echo esc_attr($bg_image['alt']); ?>"
-    class="absolute inset-0 w-full h-full object-cover" />
-  <?php endif; ?>
-
-  <div class="benefits-container relative z-10">
-   <div class="benefits-grid">
-    <!-- Imagen Principal -->
-    <div class="benefits-image-container">
-     <?php if ($main_image): ?>
-      <img
-       src="<?php echo esc_url($main_image); ?>"
-       alt="Profesionales ACOP" />
-     <?php endif; ?>
+<div class="interest-outer-wrapper ">
+ <section class="interest-section flex flex-col  justify-center py-4">
+  <!--  Agregar el titulo de la sección  -->
+  <h1 class="text-4xl  text-center font-bold mb-6 text-black"><?= $title; ?></h1>
+  
+   <!--  Agregar varias secciones de interes  -->
+   <?php foreach ($data_interests as $interest) { ?>
+    <div class="flex sm:flex-col <?= $interest['interest_direction'] ? " md:flex-row-reverse" : " md:flex-row" ?>  gap-8 justify-center items-center ">
+     <!--  Agregar la imagen del interes  -->
+     <img src="<?= $interest['interest_image']; ?>" alt="">
+     <div>
+      <!--  Agregar el subtitulo de la sección  -->
+      <h2 class="text-4xl md:text-3xl font-[900] text-black"><?= $interest['interest_subtitle']; ?></h2>
+      <!--  Agregar la descripcion de la sección  -->
+      <p class="text-black text-2xl font-medium"><?= $interest['interest_description']; ?></p>
+     </div>
     </div>
+   <?php } ?>
 
-    <!-- Contenido -->
-    <div class="benefits-content text-white">
-     <?php if ($title): ?>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">
-       <?php echo esc_html($title); ?>
-      </h2>
-     <?php endif; ?>
-
-     <?php if ($description): ?>
-      <div class="text-lg mb-6">
-       <?php echo wp_kses_post($description); ?>
-      </div>
-     <?php endif; ?>
-
-     <?php
-     // Check if button exists and has required fields
-     if ($button && isset($button['label']) && isset($button['url'])) {
-      // Call the function with the button array directly
-      acop_render_button($button);
-     }
-     ?>
-
-    </div>
-   </div>
-  </div>
  </section>
 </div>
