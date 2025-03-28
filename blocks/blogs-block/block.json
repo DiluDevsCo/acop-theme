@@ -1,0 +1,14 @@
+{
+	"name": "acop/blogs-block",
+	"title": "blogs-block",
+	"description": "blogs-block",
+	"style": ["blogs-block-css"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["blogs-block", "card"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "blogs-block.php"
+	}
+}
