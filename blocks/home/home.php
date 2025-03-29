@@ -1,4 +1,4 @@
-<?php 
+<?php
 $logo_image = get_field('logo');
 $title = get_field('title');
 $description = get_field('description');

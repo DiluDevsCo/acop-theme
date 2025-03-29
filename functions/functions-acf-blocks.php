@@ -36,5 +36,42 @@ function register_acf_blocks()
     }
 
     // END: benefits-section
+
+    // START: interest-section
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/interest-section');
+    $version = get_block_version('interest-section');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('interest-section-css', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: interest-section
+
+    // START: form-news
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/form-news');
+    $version = get_block_version('form-news');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('form-news-css', get_stylesheet_directory_uri()  . '/assets/blocks/form-news/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: form-news
+
+    // START: blogs-block
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/blogs-block');
+    $version = get_block_version('blogs-block');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('blogs-block-css', get_stylesheet_directory_uri()  . '/assets/blocks/blogs-block/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: blogs-block
+
     
 }
