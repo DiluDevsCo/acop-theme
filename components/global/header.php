@@ -112,7 +112,7 @@ if (is_user_logged_in()) {
         <?php endif; ?>
 
         <!-- Botón de login (si no está logueado) -->
-        <?php if (!is_user_logged_in() && $show_enter && !empty($login_url['title'])): ?>
+        <?php if (!is_user_logged_in()): ?>
         <div class="ml-4">
           <a href="<?php echo $login_url['url']; ?>" 
              class="inline-flex items-center justify-center rounded-full border border-transparent px-4 py-1 text-sm font-medium text-[#5D3A8E] bg-white hover:bg-gray-100 focus:outline-none">
@@ -181,7 +181,7 @@ if (is_user_logged_in()) {
       ?>
     </div>
     
-    <?php if (!is_user_logged_in() && $show_enter && !empty($login_url['title'])): ?>
+    <?php if (!is_user_logged_in()): ?>
     <div class="border-t border-[#6B48A8] pt-4 pb-3">
       <div class="px-5">
         <a href="<?php echo $login_url['url']; ?>" 
