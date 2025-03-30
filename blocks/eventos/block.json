@@ -1,0 +1,14 @@
+{
+	"name": "acop/eventos",
+	"title": "Eventos",
+	"description": "Eventos Block",
+	"style": ["eventos-css"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "eventos.php"
+	}
+}

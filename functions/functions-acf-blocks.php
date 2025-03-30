@@ -73,5 +73,17 @@ function register_acf_blocks()
 
     // END: blogs-block
 
+    // START: eventos
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/eventos');
+    $version = get_block_version('eventos');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('eventos-css', get_stylesheet_directory_uri()  . '/assets/blocks/eventos/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: eventos
+
     
 }
