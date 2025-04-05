@@ -1,6 +1,4 @@
 <?php
-/* Template Name: Eventos ACOP */
-get_header();
 
 // Obtener todos los eventos de una vez
 $eventos = get_field('eventos');
@@ -103,5 +101,3 @@ $imagen_fondo_url = $imagen_fondo && isset($imagen_fondo['url']) ? $imagen_fondo
         ?>
     </div>
 </div>
-
-<?php get_footer(); ?>
