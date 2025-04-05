@@ -114,16 +114,16 @@ img {
   }
 }
 
-.almus-container #main-content{
+.acop-container #main-content{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.almus-container #main-content.bg-page{
+.acop-container #main-content.bg-page{
   padding-left: initial;
   padding-right: initial;
 }
 
-/* .bg-page, .almus-container{   
+/* .bg-page, .acop-container{   
   background: #001C30 !important;
 }
 

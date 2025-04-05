@@ -84,6 +84,17 @@ function register_acf_blocks()
     }
 
     // END: eventos
+    // START: section-banner
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/section-banner');
+    $version = get_block_version('section-banner');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('section-banner-css', get_stylesheet_directory_uri()  . '/assets/blocks/section-banner/index.css', array(), $version, 'all'); */
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: section-banner
 
     
 }
