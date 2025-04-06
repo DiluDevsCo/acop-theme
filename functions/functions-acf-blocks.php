@@ -95,6 +95,17 @@ function register_acf_blocks()
     }
 
     // END: section-banner
+    // START: page-about-us
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/page-about-us');
+    $version = get_block_version('page-about-us');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('page-about-us-css', get_stylesheet_directory_uri()  . '/assets/blocks/page-about-us/index.css', array(), $version, 'all'); */
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: page-about-us
 
     
 }
