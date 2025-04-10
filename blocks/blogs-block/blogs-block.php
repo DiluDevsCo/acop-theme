@@ -41,7 +41,7 @@ $button = get_field('button');
      <h3 class="mt-2 line-clamp-2 text-blog text-base lg:text-lg p-0 text-[#5A3D82]"><?php echo $post_title; ?></h3>
      <img class="w-full h-full object-cover" src="<?php echo $post_thumbnail; ?>" alt="<?php echo get_the_title(); ?>">
     </div>
-    <div class="flex flex-col justify-between p-2 text-left h-1/2 bg-white">
+    <div class="flex flex-col p-2 text-left h-1/2 bg-white">
      <p class="text-sm" style="color: #666;"><?php echo strftime("%B %e, %Y", strtotime($post_date));  ?></p>
      <p class="text-sm text-[#7D669B]" style="color: #666;"><?php echo get_the_author_meta('display_name', $autor); ?></p>
     </div>
