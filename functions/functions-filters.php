@@ -16,7 +16,7 @@ add_filter('body_class','sculapp_add_custom_body_classes',10,1);
 function sculapp_add_custom_body_classes($classes) {
   $header_enabled = sculapp_is_header_enabled();
   if ($header_enabled) {
-    $classes[] = 'sculapp-header';
+    $classes[] = 'acop-header';
   }
   $classes[] = 'acop';
   return $classes;

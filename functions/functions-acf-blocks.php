@@ -73,5 +73,39 @@ function register_acf_blocks()
 
     // END: blogs-block
 
+    // START: eventos
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/eventos');
+    $version = get_block_version('eventos');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('eventos-css', get_stylesheet_directory_uri()  . '/assets/blocks/eventos/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: eventos
+    // START: section-banner
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/section-banner');
+    $version = get_block_version('section-banner');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('section-banner-css', get_stylesheet_directory_uri()  . '/assets/blocks/section-banner/index.css', array(), $version, 'all'); */
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: section-banner
+    // START: page-about-us
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/page-about-us');
+    $version = get_block_version('page-about-us');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('page-about-us-css', get_stylesheet_directory_uri()  . '/assets/blocks/page-about-us/index.css', array(), $version, 'all'); */
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: page-about-us
+
     
 }

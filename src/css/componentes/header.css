@@ -35,6 +35,6 @@
 /* To remove padding at the top of the main container added by Divi 
 TODO: Remove when Divi is remvoved
 */
-.app-header.et_fixed_nav.et_show_nav #page-container {
+.acop-header.et_fixed_nav.et_show_nav #page-container {
   padding-top: 0 !important;
 }

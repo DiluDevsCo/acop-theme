@@ -4,8 +4,8 @@ $data_interests = get_field('array_interest');
 
 ?>
 
-<div class="interest-outer-wrapper ">
- <section class="interest-section flex flex-col  justify-center py-4">
+<div class="interest-outer-wrapper">
+ <section class="interest-section flex flex-col justify-center py-4">
   <!--  Agregar el titulo de la sección  -->
   <h1 class="text-4xl  text-center font-bold mb-6 text-black"><?= $title; ?></h1>
   
