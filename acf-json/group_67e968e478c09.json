@@ -3,34 +3,9 @@
     "title": "Eventos Acop",
     "fields": [
         {
-            "key": "field_67e978c7874a5",
-            "label": "Imagen de fondo",
-            "name": "imagen_fondo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
             "key": "field_67e96dae2b7ae",
-            "label": "Eventos",
-            "name": "eventos",
+            "label": "Eventos y Responsabilidad social",
+            "name": "eventos_y_responsabilidad",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -42,19 +17,19 @@
                 "id": ""
             },
             "layout": "block",
-            "pagination": 0,
+            "pagination": 1,
+            "rows_per_page": 20,
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
+            "button_label": "Agregar",
             "sub_fields": [
                 {
-                    "key": "field_67e96947b8f78",
-                    "label": "Titulo",
-                    "name": "titulo_evento",
+                    "key": "field_681791cca29b3",
+                    "label": "Eventos",
+                    "name": "eventos",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -63,165 +38,388 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67e96dae2b7ae"
-                },
-                {
-                    "key": "field_67e96968b8f79",
-                    "label": "Lugar del evento",
-                    "name": "lugar_evento",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67e96dae2b7ae"
-                },
-                {
-                    "key": "field_67e96928b8f77",
-                    "label": "Fecha del evento",
-                    "name": "fecha_evento",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "Marzo 14 y 15",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67e96dae2b7ae"
-                },
-                {
-                    "key": "field_67e968e4b8f76",
-                    "label": "Año",
-                    "name": "ano_evento",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67e96dae2b7ae"
-                },
-                {
-                    "key": "field_67e96983b8f7a",
-                    "label": "País del evento",
-                    "name": "pais_evento",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67e96dae2b7ae"
-                },
-                {
-                    "key": "field_67e969a7b8f7b",
-                    "label": "Exclusividad",
-                    "name": "texto_exclusivo",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_67e96dae2b7ae"
-                },
-                {
-                    "key": "field_67e973b9a45f6",
-                    "label": "Imagen del evento",
-                    "name": "imagen_evento",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "parent_repeater": "field_67e96dae2b7ae"
-                },
-                {
-                    "key": "field_67e969f629141",
-                    "label": "Botón",
-                    "name": "boton",
-                    "aria-label": "",
-                    "type": "clone",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "clone": [
-                        "group_647933b31bf1d"
-                    ],
-                    "display": "seamless",
                     "layout": "block",
-                    "prefix_label": 1,
-                    "prefix_name": 1,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Agregar evento",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_67e96947b8f78",
+                            "label": "Titulo",
+                            "name": "titulo_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_681791cca29b3"
+                        },
+                        {
+                            "key": "field_67e96968b8f79",
+                            "label": "Lugar del evento",
+                            "name": "lugar_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_681791cca29b3"
+                        },
+                        {
+                            "key": "field_67e96928b8f77",
+                            "label": "Fecha del evento",
+                            "name": "fecha_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Marzo 14 y 15",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_681791cca29b3"
+                        },
+                        {
+                            "key": "field_67e968e4b8f76",
+                            "label": "Año",
+                            "name": "ano_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_681791cca29b3"
+                        },
+                        {
+                            "key": "field_67e96983b8f7a",
+                            "label": "País del evento",
+                            "name": "pais_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_681791cca29b3"
+                        },
+                        {
+                            "key": "field_67e969a7b8f7b",
+                            "label": "Exclusividad",
+                            "name": "texto_exclusivo",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_681791cca29b3"
+                        },
+                        {
+                            "key": "field_67e973b9a45f6",
+                            "label": "Imagen del evento",
+                            "name": "imagen_evento",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium",
+                            "parent_repeater": "field_681791cca29b3"
+                        },
+                        {
+                            "key": "field_67e969f629141",
+                            "label": "Botón",
+                            "name": "boton",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_647933b31bf1d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 1,
+                            "prefix_name": 1,
+                            "parent_repeater": "field_681791cca29b3"
+                        }
+                    ],
+                    "parent_repeater": "field_67e96dae2b7ae"
+                },
+                {
+                    "key": "field_6817928ca29b5",
+                    "label": "Responsabilidad social",
+                    "name": "responsabilidad_social",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Agregar",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6817928ca29b7",
+                            "label": "Titulo",
+                            "name": "titulo_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6817928ca29b5"
+                        },
+                        {
+                            "key": "field_6817928ca29b8",
+                            "label": "Lugar del evento",
+                            "name": "lugar_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6817928ca29b5"
+                        },
+                        {
+                            "key": "field_6817928ca29b9",
+                            "label": "Fecha del evento",
+                            "name": "fecha_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Marzo 14 y 15",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6817928ca29b5"
+                        },
+                        {
+                            "key": "field_6817928ca29ba",
+                            "label": "Año",
+                            "name": "ano_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6817928ca29b5"
+                        },
+                        {
+                            "key": "field_6817928ca29bb",
+                            "label": "País del evento",
+                            "name": "pais_evento",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6817928ca29b5"
+                        },
+                        {
+                            "key": "field_6817928ca29bc",
+                            "label": "Exclusividad",
+                            "name": "texto_exclusivo",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6817928ca29b5"
+                        },
+                        {
+                            "key": "field_6817928ca29bd",
+                            "label": "Imagen del evento",
+                            "name": "imagen_evento",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium",
+                            "parent_repeater": "field_6817928ca29b5"
+                        },
+                        {
+                            "key": "field_6817928ca29be",
+                            "label": "Botón",
+                            "name": "boton",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_647933b31bf1d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 1,
+                            "prefix_name": 1,
+                            "parent_repeater": "field_6817928ca29b5"
+                        }
+                    ],
                     "parent_repeater": "field_67e96dae2b7ae"
                 }
             ]
@@ -245,5 +443,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743354079
+    "modified": 1746375539
 }

@@ -3,6 +3,7 @@ $title = get_field('title');
 $description = get_field('description');
 $action = get_field('action');
 $action_url = get_field('action_url');
+$imagen_click_aqui = get_field('imagen_click_aqui');
 $image = get_field('image');
 ?>
 
@@ -28,7 +29,7 @@ $image = get_field('image');
               <?php echo $action; ?>
               <!-- Icono de cursor/mano -->
               <img 
-                src="https://v0.blob.com/qgIkf.png" 
+                src="<?php echo esc_url($imagen_click_aqui); ?>" 
                 alt="Cursor" 
                 class="ml-2 w-8 h-8 inline-block"
               />
