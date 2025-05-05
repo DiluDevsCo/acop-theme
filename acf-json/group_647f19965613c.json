@@ -1,6 +1,6 @@
 {
     "key": "group_647f19965613c",
-    "title": "Sculapp Ajustes",
+    "title": "Ajustes",
     "fields": [
         {
             "key": "field_64811303389c1",
@@ -322,5 +322,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691597450
+    "modified": 1746413039
 }
