@@ -107,5 +107,17 @@ function register_acf_blocks()
 
     // END: page-about-us
 
+    // START: blogs-list
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/blogs-list');
+    $version = get_block_version('blogs-list');
+    /* wp_register_script('blogs-list-js', get_stylesheet_directory_uri()  . '/assets/blocks/blogs-list/index.js', $version, true); */
+    /* wp_register_style('blogs-list-css', get_stylesheet_directory_uri()  . '/assets/blocks/blogs-list/index.css', array(), $version, 'all'); */
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: blogs-list
+
     
 }

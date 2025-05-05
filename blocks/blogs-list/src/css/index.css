@@ -1,0 +1,17 @@
+.blog-list {
+ display: flex;
+ flex-direction: column;
+ gap: 2rem;
+}
+.blog-card {
+ display: flex;
+ gap: 1rem;
+}
+.blog-card .image img {
+ width: 200px;
+ height: auto;
+ object-fit: cover;
+}
+.blog-card .content {
+ max-width: 600px;
+}
