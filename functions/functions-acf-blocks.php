@@ -119,5 +119,17 @@ function register_acf_blocks()
 
     // END: blogs-list
 
+     // START: patients-materials
+     $registro = register_block_type(get_stylesheet_directory() . '/blocks/patients-materials');
+     $version = get_block_version('patients-materials');
+     /* wp_register_script('patients-materials-js', get_stylesheet_directory_uri()  . '/assets/blocks/patients-materials/index.js', $version, true); */
+     /* wp_register_style('patients-materials-css', get_stylesheet_directory_uri()  . '/assets/blocks/patients-materials/index.css', array(), $version, 'all'); */
+ 
+     if (!$registro) {
+         error_log('No se pudo registrar el bloque');
+     }
+ 
+     // END: patients-materials
+
     
 }
