@@ -8,3 +8,4 @@ require get_stylesheet_directory() . '/functions/functions-filters.php';
 require get_stylesheet_directory() . '/functions/functions-helpers.php';
 require get_stylesheet_directory() . '/functions/functions-shortcodes.php';
 require get_stylesheet_directory() . '/functions/functions-walkers.php';
+require get_stylesheet_directory() . '/functions/functions-most-popular-post.php';
