@@ -1,0 +1,58 @@
+name: Deploy ACOP Theme to Staging
+on:
+  push:
+    branches:
+      - staging
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if workflow enabled
+        if: vars.ENABLED_STAGING == 'false'
+        run: |
+          echo "NOT ENABLED"
+
+      - name: Checkout code
+        if: vars.ENABLED_STAGING == 'true'
+        uses: actions/checkout@main
+      
+          
+      - name: Install Node.js and npm
+        if: vars.ENABLED_STAGING == 'true'
+        uses: actions/setup-node@main
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        if: vars.ENABLED_STAGING == 'true'
+        run: |
+          npm install
+      
+      - name: Run Build
+        if: vars.ENABLED_STAGING == 'true'
+        run: |
+          npm run build
+
+      - name: Generate Key
+        if: vars.ENABLED_STAGING == 'true'
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.CPANEL_PRIVATE_KEY }}" > ~/.ssh/private.key
+          chmod -v 600 ~/.ssh/private.key
+          eval $(ssh-agent -s)
+          ssh-add ~/.ssh/private.key
+      - name: Deploy to cPanel
+        if: vars.ENABLED_STAGING == 'true'
+        env:
+          dest: '${{ secrets.CPANEL_USERNAME }}@${{ vars.CPANEL_DOMAIN }}:${{ vars.CPANEL_STAGING_THEME_PATH }}'
+        run: |
+          rsync -avh --delete-before \
+          --chown=${{ secrets.CPANEL_USER_GROUP_PERMISSION }} \
+          -e "ssh -p ${{ secrets.CPANEL_PORT }} -i ~/.ssh/private.key -o StrictHostKeyChecking=no" \
+          --exclude /deploy_key \
+          --exclude /.git/ \
+          --exclude .DS_Store \
+          --exclude /.github/ \
+          --exclude /node_modules/ \
+          ./ ${{ env.dest }}
