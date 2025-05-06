@@ -5,8 +5,6 @@
   $subtitle = get_field('subtitle', 'option');
 ?>
 
-
-
 <section class="relative h-48 md:h-40  flex items-center justify-center text-center" style="background-color: <?= esc_attr($background_color) ?>;">
   <?php if ($background_image): ?>
     <img src="<?= esc_url($background_image) ?>" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
