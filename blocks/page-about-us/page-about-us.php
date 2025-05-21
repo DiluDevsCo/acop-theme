@@ -165,7 +165,7 @@ $tab_activo = 'comite-ejecutivo';
           <div class="flex flex-wrap justify-center gap-y-10 max-w-6xl mx-auto">
             <?php foreach($miembros_datos['miembros_activos'] as $miembro): ?>
               <div class="text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                <div class="rounded-full bg-white p-2 w-36 h-36 mx-auto mb-4 flex items-center justify-center overflow-hidden shadow-md">
+                <div class="rounded-full bg-white p-2 w-36 h-36 mx-auto mb-4 flex items-center justify-center overflow-hidden">
                   <?php if($miembro['imagen']): ?>
                     <img src="<?php echo $miembro['imagen']; ?>" alt="<?php echo esc_attr($miembro['titulo']); ?>" class="w-full h-full object-cover rounded-full">
                   <?php endif; ?>
@@ -188,7 +188,7 @@ $tab_activo = 'comite-ejecutivo';
           <div class="flex flex-wrap justify-center gap-y-10 max-w-6xl mx-auto">
             <?php foreach($miembros_datos['miembros_estudiantes'] as $estudiante): ?>
               <div class="text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
-                <div class="rounded-full bg-white p-2 w-36 h-36 mx-auto mb-4 flex items-center justify-center overflow-hidden shadow-md">
+                <div class="rounded-full bg-white p-2 w-36 h-36 mx-auto mb-4 flex items-center justify-center overflow-hidden">
                   <?php if($estudiante['imagen']): ?>
                     <img src="<?php echo $estudiante['imagen']; ?>" alt="<?php echo esc_attr($estudiante['titulo']); ?>" class="w-full h-full object-cover rounded-full">
                   <?php endif; ?>

@@ -75,3 +75,19 @@ if (!is_page_template('page-template-blank.php')) : ?>
 </body>
 
 </html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Cambiar placeholders
+    document.getElementById('username').setAttribute('placeholder', 'E-mail');
+    document.getElementById('password').setAttribute('placeholder', 'Password');
+    
+    // Cambiar el texto del botón
+    const button = document.querySelector('.woocommerce-button');
+    button.setAttribute('value', 'Ingresar');
+    button.textContent = 'Ingresar';
+    
+    // Cambiar "Recuérdame" por "Guardar clave"
+    const rememberSpan = document.querySelector('.woocommerce-form-login__rememberme span');
+    rememberSpan.textContent = 'Guardar clave';
+});
+</script>

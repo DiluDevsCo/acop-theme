@@ -106,6 +106,17 @@ function register_acf_blocks()
     }
 
     // END: page-about-us
+    // START: banner-cabecera
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/banner-cabecera');
+    $version = get_block_version('banner-cabecera');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('banner-cabecera-css', get_stylesheet_directory_uri()  . '/assets/blocks/banner-cabecera/index.css', array(), $version, 'all'); */
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: banner-cabecera
 
     // START: blogs-list
     $registro = register_block_type(get_stylesheet_directory() . '/blocks/blogs-list');
