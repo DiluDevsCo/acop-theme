@@ -3,7 +3,7 @@ name: Deploy WordPress Theme via FTP | Main
 on:
   push:
     branches:
-      - staging  # o 'main' para producción
+      - main  # o 'main' para producción
 
 jobs:
   ftp-deploy:
