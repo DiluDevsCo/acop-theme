@@ -1,4 +1,4 @@
-name: Deploy WordPress Theme via FTP
+name: Deploy WordPress Theme via FTP | Staging
 
 on:
   push:
