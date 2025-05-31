@@ -142,5 +142,14 @@ function register_acf_blocks()
  
      // END: patients-materials
 
-    
+    // START: login-block
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/login-block');
+    $version = get_block_version('login-block');
+    wp_register_script('login-block-js', get_stylesheet_directory_uri()  . '/assets/blocks/login-block/index.js', $version, true);
+     /* wp_register_style('login-block-css', get_stylesheet_directory_uri()  . '/assets/blocks/login-block/index.css', array(), $version, 'all'); */
+
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque login-block');
+    }
 }
