@@ -1,0 +1,15 @@
+{
+    "name": "acop/login-block",
+    "title": "Login Block",
+    "description": "Custom Login Block with ACF",
+    "style": ["login-block-css"],
+    "script": ["login-block-js"],
+    "category": "formatting",
+    "icon": "admin-users",
+    "version": "1.0.0",
+    "keywords": ["login", "usuario", "autenticacion", "woocommerce"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "login-block.php"
+    }
+}
