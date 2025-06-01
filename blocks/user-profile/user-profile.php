@@ -245,9 +245,9 @@ function render_pagination($current_page, $total_pages, $tab_type) {
 <div class="user-profile-block <?php echo esc_attr($clase_personalizada); ?> max-w-4xl mx-auto bg-white">
     
     <!-- Header del perfil -->
-    <div class="profile-header flex items-start space-x-6 mb-8 p-6">
+    <div class="profile-header flex md:space-x-6 mb-8 p-6">
         <!-- Avatar -->
-        <div class="flex-shrink-0">
+        <div class="flex flex-col items-center justify-center">
             <div class="w-24 h-24 rounded-full bg-[#8B71A8] flex items-center justify-center overflow-hidden">
                 <?php if ($avatar_url): ?>
                     <img src="<?php echo esc_url($avatar_url); ?>" 
@@ -262,7 +262,7 @@ function render_pagination($current_page, $total_pages, $tab_type) {
         </div>
         
         <!-- Info del usuario -->
-        <div class="flex-1">
+        <div class="md:flex-1">
             <h1 class="text-2xl font-bold text-gray-900 mb-1"><?php echo esc_html($full_name); ?></h1>
             <p class="text-gray-600 mb-4"><?php echo esc_html($job_title); ?></p>
             
