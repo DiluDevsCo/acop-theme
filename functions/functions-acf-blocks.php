@@ -152,4 +152,17 @@ function register_acf_blocks()
     if (!$registro) {
         error_log('No se pudo registrar el bloque login-block');
     }
+
+    // END: login-block
+
+    // START: user-profile
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/user-profile');
+    $version = get_block_version('user-profile');
+    wp_register_script('user-profile-js', get_stylesheet_directory_uri() . '/assets/blocks/user-profile/index.js', array(), $version, true);
+    wp_register_style('user-profile-css', get_stylesheet_directory_uri() . '/assets/blocks/user-profile/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque user-profile');
+    }
+    // END: user-profile
 }
