@@ -245,9 +245,9 @@ function render_pagination($current_page, $total_pages, $tab_type) {
 <div class="user-profile-block <?php echo esc_attr($clase_personalizada); ?> max-w-4xl mx-auto bg-white">
     
     <!-- Header del perfil -->
-    <div class="profile-header flex md:space-x-6 mb-8 p-6">
+    <div class="profile-header flex items-center md:items-start md:space-x-6 mb-8 p-6">
         <!-- Avatar -->
-        <div class="flex flex-col items-center justify-center">
+        <div class="md:flex-shrink-0">
             <div class="w-24 h-24 rounded-full bg-[#8B71A8] flex items-center justify-center overflow-hidden">
                 <?php if ($avatar_url): ?>
                     <img src="<?php echo esc_url($avatar_url); ?>" 
