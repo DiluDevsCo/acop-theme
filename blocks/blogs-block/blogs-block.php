@@ -33,7 +33,7 @@ $button = get_field('button');
    $post_date = date("F j, Y", strtotime($post->post_date));
    $post_thumbnail = get_the_post_thumbnail_url($post_id);
    $post_url = get_permalink($post_id);
-   $description = get_the_excerpt($post_id);
+   $description = wp_strip_all_tags(get_the_excerpt($post_id), true);
    ?>
 
    <div class="w-[340px] shadow-lg p-4 md:w-auto h-[400px] md:h-[250px] lg:h-[400px] flex-shrink-0 overflow-hidden" style="border-radius: 20px">
