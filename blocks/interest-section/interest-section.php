@@ -11,7 +11,7 @@ $data_interests = get_field('array_interest');
   
    <!--  Agregar varias secciones de interes  -->
    <?php foreach ($data_interests as $interest) { ?>
-    <div class="flex sm:flex-col <?= $interest['interest_direction'] ? " md:flex-row-reverse" : " md:flex-row" ?>  gap-8 justify-center items-center ">
+    <div class="flex flex-col <?= $interest['interest_direction'] ? " md:flex-row-reverse" : " md:flex-row" ?>  gap-8 justify-center items-center ">
      <!--  Agregar la imagen del interes  -->
      <img src="<?= $interest['interest_image']; ?>" alt="">
      <div>
