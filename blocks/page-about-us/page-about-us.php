@@ -42,7 +42,7 @@ $tab_activo = 'comite-ejecutivo';
         $presidente = $comite_ejecutivo[0]; 
         ?>
         <div class="text-center mb-16">
-          <div class="rounded-full border-[12px] border-solid border-[#5A3D82] bg-white w-52 h-52 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+          <div class="rounded-full bg-white w-52 h-52 mx-auto mb-4 flex items-center justify-center overflow-hidden">
             <?php if($presidente['imagen']): ?>
               <img src="<?php echo $presidente['imagen']; ?>" alt="<?php echo esc_attr($presidente['nombre_del_ejecutivo']); ?>" class="w-full h-full object-cover rounded-full">
             <?php endif; ?>
@@ -60,7 +60,7 @@ $tab_activo = 'comite-ejecutivo';
               $miembro = $comite_ejecutivo[$i];
             ?>
               <div class="text-center">
-                <div class="rounded-full border-[12px] border-solid border-[#5A3D82] bg-white w-48 h-48 mx-auto mb-3 flex items-center justify-center overflow-hidden">
+                <div class="rounded-full bg-white w-48 h-48 mx-auto mb-3 flex items-center justify-center overflow-hidden">
                   <?php if($miembro['imagen']): ?>
                     <img src="<?php echo $miembro['imagen']; ?>" alt="<?php echo esc_attr($miembro['nombre_del_ejecutivo']); ?>" class="w-full h-full object-cover rounded-full">
                   <?php endif; ?>
