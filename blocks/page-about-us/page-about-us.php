@@ -29,7 +29,7 @@ $tab_activo = 'comite-ejecutivo';
 </div>
 
 <!-- Contenido de los tabs -->
-<div class="tab-content">
+<div class="">
   <!-- Tab: Comité Ejecutivo -->
   <div id="comite-ejecutivo" class="tab-pane">
     <div class="py-8">
