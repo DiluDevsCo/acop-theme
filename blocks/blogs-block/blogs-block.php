@@ -3,7 +3,7 @@ setlocale(LC_TIME, "spanish");
 $args = array(
  'post_type' => 'post',
  'post_status' => 'publish',
- 'numberposts' => 4,
+ 'numberposts' => 3,
  'order' => 'DESC'
 );
 
@@ -22,7 +22,7 @@ $button = get_field('button');
 
  <h2 class="text-black">Blog</h2>
 
- <div class="blog-cards gap-[30px] grid grid-rows-1 md:grid-cols-4">
+ <div class="blog-cards gap-[30px] grid grid-rows-1 md:grid-cols-3">
 
   <?php foreach ($posts as $post) { ?>
 
@@ -35,15 +35,23 @@ $button = get_field('button');
    $post_url = get_permalink($post_id);
    ?>
 
-   <a href="<?php echo $post_url; ?>" class="w-[340px] md:w-auto h-[400px] md:h-[250px] lg:h-[400px] flex-shrink-0 overflow-hidden" style="border-radius: 20px">
+   <a href="<?php echo $post_url; ?>" class="w-[340px] md:w-auto h-[400px] md:h-[250px] lg:h-[400px] flex-shrink-0 overflow-hidden shadow" style="border-radius: 20px">
 
     <div class="w-full h-1/2 overflow-hidden">
-     <h3 class="mt-2 line-clamp-2 text-blog text-base lg:text-lg p-0 text-[#5A3D82]"><?php echo $post_title; ?></h3>
+     <h3 class="mt-2 line-clamp-2 text-blog font-extrabold lg:text-lg p-0 text-[#5A3D82]"><?php echo $post_title; ?></h3>
      <img class="w-full h-full object-cover" src="<?php echo $post_thumbnail; ?>" alt="<?php echo get_the_title(); ?>">
     </div>
-    <div class="flex flex-col p-2 text-left h-1/2 bg-white">
-     <p class="text-sm" style="color: #666;"><?php echo strftime("%B %e, %Y", strtotime($post_date));  ?></p>
-     <p class="text-sm text-[#7D669B]" style="color: #666;"><?php echo get_the_author_meta('display_name', $autor); ?></p>
+    <div class="flex flex-col p-2 text-center h-1/2 bg-white">
+     <p class="text-sm font-extrabold text-[#5A3D82]"><?php echo get_the_author_meta('display_name', $autor); ?></p>
+     <?php acop_render_button(
+           array(
+            'label' => 'Leer', 
+            'url' => $post_url, 
+            'classes' => 'mt-auto', 
+            'style' => 'blue', 
+            'size' => 'sm'
+            )
+            ); ?>
     </div>
    </a>
   <?php } ?>
