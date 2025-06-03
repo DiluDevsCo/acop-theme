@@ -23,7 +23,16 @@ $query = new WP_Query($args);
      <span class="text-sm text-gray-500"><?php echo get_the_date(); ?></span>
      <h2 class="text-xl font-extrabold mt-1 mb-2"><?php the_title(); ?></h2>
      <p class="text-gray-700 mb-4"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-     <a href="<?php the_permalink(); ?>" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Leer</a>
+     <div>
+      <?php acop_render_button(
+       array(
+        'label' => 'Leer',
+        'url' => the_permalink(),
+        'style' => 'blue',
+        'size' => 'md'
+       )
+      ); ?>
+     </div>
     </div>
    </div>
   <?php endwhile; ?>
@@ -44,7 +53,7 @@ $query = new WP_Query($args);
   foreach ($links as $link) {
    echo '<div class="pagination-link">' . str_replace(
     ['page-numbers', 'current'],
-    ['px-4 py-2 border rounded text-sm text-gray-700 hover:bg-blue-100 transition', 'bg-blue-600 text-white'],
+    ['px-4 py-2 border border-[#1976D2] rounded-full text-sm text-black hover:bg-[#1976D2] hover:text-white hover:bg-opacity-50 transition', 'bg-[#1976D2] bg-opacity-50 text-[#1976D2]'],
     $link
    ) . '</div>';
   }
