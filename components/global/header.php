@@ -64,7 +64,7 @@ if (is_user_logged_in()) {
 ?>
 
 <!-- Header principal -->
-<nav class="sticky top-0 z-50 w-full bg-[#5D3A8E]">
+<nav class="sticky top-0 z-50 w-full bg-[#5D3A8E] header-principal">
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
@@ -87,11 +87,11 @@ if (is_user_logged_in()) {
             'theme_location' => 'primary', // Asegúrate de que esta ubicación del menú esté registrada en tu tema
             'container' => '',
             'menu' => $menu,
-            'menu_class' => 'flex space-x-8 !text-white text-base font-medium',
+            'menu_class' => 'flex space-x-8 text-white text-base font-medium',
             'items_wrap' => '<ul class="%2$s">%3$s</ul>',
             'link_before' => '',
             'link_after' => '',
-            'link_class' => '!text-white text-base font-medium hover:text-white/80 transition-colors',
+            'link_class' => 'text-white text-base font-medium hover:text-white/80 transition-colors',
             'current_class' => 'border-b-2 border-white pb-1'
           )
         );
