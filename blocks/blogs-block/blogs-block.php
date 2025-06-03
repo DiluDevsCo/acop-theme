@@ -33,7 +33,11 @@ $button = get_field('button');
    $post_date = date("F j, Y", strtotime($post->post_date));
    $post_thumbnail = get_the_post_thumbnail_url($post_id);
    $post_url = get_permalink($post_id);
-   $description = wp_strip_all_tags(get_the_excerpt($post_id), true);
+  $raw_excerpt = wp_strip_all_tags(get_the_excerpt($post_id), true);
+$parts = preg_split('/(?<=\.)\s+/', $raw_excerpt, 2); // divide al primer punto
+
+$custom_author = isset($parts[0]) ? trim($parts[0]) : '';
+$description = isset($parts[1]) ? trim($parts[1]) : '';
    ?>
 
    <div class="w-[340px] shadow-lg p-4 md:w-auto h-[400px] md:h-[250px] lg:h-[400px] flex-shrink-0 overflow-hidden" style="border-radius: 20px">
@@ -44,7 +48,7 @@ $button = get_field('button');
     </div>
     <div class="flex flex-col p-2 text-center h-1/2 bg-white justify-between">
      <p class="text-sm font-extrabold text-black truncate line-clamp-1"><?= $description ?></p>
-     <p class="text-sm font-extrabold text-[#7D669B]"><?php echo get_the_author_meta('display_name', $autor); ?></p>
+     <p class="text-sm font-extrabold text-[#7D669B]"><?php echo get_the_author_meta('display_name', $custom_author); ?></p>
      <div>
       <?php acop_render_button(
        array(
