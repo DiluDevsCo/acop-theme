@@ -165,4 +165,14 @@ function register_acf_blocks()
         error_log('No se pudo registrar el bloque user-profile');
     }
     // END: user-profile
+    // START: regional
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/regional');
+    $version = get_block_version('regional');
+    wp_register_script('regional-js', get_stylesheet_directory_uri() . '/assets/blocks/regional/index.js', array(), $version, true);
+    wp_register_style('regional-css', get_stylesheet_directory_uri() . '/assets/blocks/regional/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque regional');
+    }
+    // END: regional
 }
