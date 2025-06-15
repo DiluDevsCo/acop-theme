@@ -1,0 +1,14 @@
+{
+	"name": "acop/regional",
+	"title": "Regional",
+	"description": "Regional Block",
+	"style": ["regional-css"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "regional.php"
+	}
+}
