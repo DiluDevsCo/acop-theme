@@ -14,7 +14,7 @@ foreach ($materials as $material) {
  <?php
  $cards = $material['cards'];
  ?>
- <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4 py-8">
   <?php
   if (empty($cards)) {
    continue; // No hay tarjetas, saltamos a la siguiente
