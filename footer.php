@@ -119,7 +119,7 @@ if (!is_page_template('page-template-blank.php')) : ?>
               </li>
               <li>
                 <a 
-                  href="#" 
+                  href="/nosotros" 
                   class="text-gray-600 hover:text-[#01A3DE] transition-colors duration-200 text-sm lg:text-base inline-flex items-center group"
                 >
                   <span>Miembros</span>
@@ -130,7 +130,7 @@ if (!is_page_template('page-template-blank.php')) : ?>
               </li>
               <li>
                 <a 
-                  href="#" 
+                  href="/eventos-2" 
                   class="text-gray-600 hover:text-[#01A3DE] transition-colors duration-200 text-sm lg:text-base inline-flex items-center group"
                 >
                   <span>Eventos</span>
@@ -141,7 +141,7 @@ if (!is_page_template('page-template-blank.php')) : ?>
               </li>
               <li>
                 <a 
-                  href="#" 
+                  href="/blogs-acop" 
                   class="text-gray-600 hover:text-[#01A3DE] transition-colors duration-200 text-sm lg:text-base inline-flex items-center group"
                 >
                   <span>Blog</span>
