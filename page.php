@@ -2,8 +2,13 @@
 
 get_header();
 
+
+
 $is_page_builder_used = et_pb_is_pagebuilder_used(get_the_ID());
 $hide_title = get_field('hide_title');
+
+if (!$hide_title) get_template_part('template-parts/header', 'banner');
+
 $bool_color = get_field('bool_color');
 $bg_color = get_field("bg_color");
 
@@ -18,9 +23,7 @@ $bg_color = get_field("bg_color");
       <?php endif; ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class("border-solid border-gray-100"); ?>>
         <?php if (!$is_page_builder_used) : ?>
-          <?php if ($hide_title != true) { ?>
-            <h1 class="entry-title main_title"><?php the_title(); ?></h1>
-          <?php } ?>
+          
           <?php
           $thumb = '';
 

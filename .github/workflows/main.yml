@@ -1,0 +1,29 @@
+name: Deploy WordPress Theme via FTP | Main
+
+on:
+  push:
+    branches:
+      - main  # o 'main' para producción
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build theme
+        run: npm run build
+
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # o ./dist o ./build si produces archivos en una carpeta diferente
+          server-dir: ${{ secrets.FTP_REMOTE_DIR_MAIN }}

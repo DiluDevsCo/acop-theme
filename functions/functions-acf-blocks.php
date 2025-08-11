@@ -3,161 +3,176 @@
 add_action('init', 'register_acf_blocks', 5);
 function register_acf_blocks()
 {
-    // START: Registrar calendario
-    $registro_calendario = register_block_type(get_stylesheet_directory() . '/blocks/calendario');
-    $version = '1.0.1';
-    if (!$registro_calendario) {
-        error_log('No se pudo registrar el bloque');
-    }
-    // Registrar estilos y scripts
-    wp_register_style('calendario-block-css', get_stylesheet_directory_uri()  . '/assets/blocks/calendario/calendario.css', array(), $version, 'all');
-    wp_register_style('calendario-block-editor-css', get_stylesheet_directory_uri()  . '/assets/blocks/calendario/calendario-editor.css', array(), $version, 'all');
-    wp_register_script('calendario-block-js', get_stylesheet_directory_uri()  . '/assets/blocks/calendario/index.js', array(), $version, true);
-    // END: Registrar calendario
-
-    // Registrar estilos y scripts simulations
-    /*  wp_register_style( 'simulations-block-css', get_stylesheet_directory_uri()  . '/assets/blocks/simulations/index.css', array(), $version,'all' ); */
-    wp_register_style('simulations-block-editor-css', get_stylesheet_directory_uri()  . '/assets/blocks/simulations/simulations-editor.css', array(), $version, 'all');
-    wp_register_script('simulations-block-js', get_stylesheet_directory_uri()  . '/assets/blocks/simulations/index.js', array(), $version, true);
-    // END: Registrar calendario
-
-    // START: Registrar image-text-and-buttons
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/image-text-and-buttons');
-    $version = get_block_version('image-text-and-buttons');
-    wp_register_script('image-text-and-buttons-js', get_stylesheet_directory_uri()  . '/assets/blocks/image-text-and-buttons/index.js', array(), $version);
-    wp_register_style('image-text-and-buttons-css', get_stylesheet_directory_uri()  . '/assets/blocks/image-text-and-buttons/index.css', array(), $version, 'all');
+    // START: home
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/home');
+    $version = get_block_version('home');
+    /* wp_register_script('home-js', get_stylesheet_directory_uri()  . '/assets/blocks/home/index.js', $version, true); */
+    wp_register_style('home-css', get_stylesheet_directory_uri()  . '/assets/blocks/home/index.css', array(), $version, 'all');
 
     if (!$registro) {
         error_log('No se pudo registrar el bloque');
     }
-    // END: Registrar image-text-and-buttons
 
-
-    // START: Registrar cards-cursos
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/cards-cursos');
-    $version = get_block_version('cards-cursos');
-    wp_register_style('cards-cursos-css', get_stylesheet_directory_uri()  . '/assets/blocks/cards-cursos/index.css', array(), $version, 'all');
+    // END: home
+    // START: info-card
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/info-card');
+    $version = get_block_version('info-card');
+    /* wp_register_script('info-card-js', get_stylesheet_directory_uri()  . '/assets/blocks/info-card/index.js', $version, true); */
+    wp_register_style('info-card-css', get_stylesheet_directory_uri()  . '/assets/blocks/info-card/index.css', array(), $version, 'all');
 
     if (!$registro) {
         error_log('No se pudo registrar el bloque');
     }
-    // END: Registrar cards-cursos
 
-    // START: Registrar blogs-blog
+    // END: info-card
+    // START: benefits-section
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/benefits-section');
+    $version = get_block_version('benefits-section');
+    /* wp_register_script('benefits-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/benefits-section/index.js', $version, true); */
+    wp_register_style('benefits-section-css', get_stylesheet_directory_uri()  . '/assets/blocks/benefits-section/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: benefits-section
+
+    // START: interest-section
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/interest-section');
+    $version = get_block_version('interest-section');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('interest-section-css', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: interest-section
+
+    // START: form-news
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/form-news');
+    $version = get_block_version('form-news');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('form-news-css', get_stylesheet_directory_uri()  . '/assets/blocks/form-news/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: form-news
+
+    // START: blogs-block
     $registro = register_block_type(get_stylesheet_directory() . '/blocks/blogs-block');
     $version = get_block_version('blogs-block');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
     wp_register_style('blogs-block-css', get_stylesheet_directory_uri()  . '/assets/blocks/blogs-block/index.css', array(), $version, 'all');
 
     if (!$registro) {
         error_log('No se pudo registrar el bloque');
     }
-    // END: Registrar blogs-blog
 
-    // START: approve-evaluation
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/approve-evaluation');
-    $version = get_block_version('approve-evaluation');
-    wp_register_script('approve-evaluation-js', get_stylesheet_directory_uri()  . '/assets/blocks/approve-evaluation/index.js', $version, true);
-    wp_register_style('approve-evaluation-css', get_stylesheet_directory_uri()  . '/assets/blocks/approve-evaluation/index.css', array(), $version, 'all');
+    // END: blogs-block
+
+    // START: eventos
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/eventos');
+    $version = get_block_version('eventos');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    wp_register_style('eventos-css', get_stylesheet_directory_uri()  . '/assets/blocks/eventos/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque');
+    }
+
+    // END: eventos
+    // START: section-banner
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/section-banner');
+    $version = get_block_version('section-banner');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('section-banner-css', get_stylesheet_directory_uri()  . '/assets/blocks/section-banner/index.css', array(), $version, 'all'); */
 
     if (!$registro) {
         error_log('No se pudo registrar el bloque');
     }
 
-    // END: approve-evaluation
-
-    // START: show-universities
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/show-universities');
-    $version = get_block_version('show-universities');
-    wp_register_script('show-universities-js', get_stylesheet_directory_uri()  . '/assets/blocks/show-universities/index.js', $version, true);
-    wp_register_style('show-universities-css', get_stylesheet_directory_uri()  . '/assets/blocks/show-universities/index.css', array(), $version, 'all');
-
-    if (!$registro) {
-        error_log('No se pudo registrar el bloque');
-    }
-    // END: show-universities
-
-    // START: Registrar testimonials
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/testimonials');
-    $version = get_block_version('testimonials');
-    wp_register_script('testimonials-js', get_stylesheet_directory_uri()  . '/assets/blocks/testimonials/index.js', array("swiper"), $version);
-    wp_register_style('testimonials-css', get_stylesheet_directory_uri()  . '/assets/blocks/testimonials/index.css', array(), $version, 'all');
-    // END: Registrar testimonials
-    // START: Registrar purchase
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/purchase');
-    $version = get_block_version('purchase');
-    wp_register_script('purchase-js', get_stylesheet_directory_uri()  . '/assets/blocks/purchase/index.js', array("swiper"), $version);
-    wp_register_style('purchase-css', get_stylesheet_directory_uri()  . '/assets/blocks/purchase/index.css', array(), $version, 'all');
-    // END: Registrar purchase
-
-    // START: Registrar icon-text
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/icon-text');
-    $version = get_block_version('icon-text');
-    wp_register_script('icon-text-js', get_stylesheet_directory_uri()  . '/assets/blocks/icon-text/index.js', $version, true);
-    wp_register_style('icon-text-css', get_stylesheet_directory_uri()  . '/assets/blocks/icon-text/index.css', array(), $version, 'all');
-    // END: Registrar icon-text
-
-
-    // START: Registrar imagen-texto-y-fondo
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/imagen-texto-y-fondo');
-    $version = get_block_version('imagen-texto-y-fondo');
-    wp_register_script('imagen-texto-y-fondo-js', get_stylesheet_directory_uri()  . '/assets/blocks/imagen-texto-y-fondo/index.js', array("swiper"), $version);
-    wp_register_style('imagen-texto-y-fondo-css', get_stylesheet_directory_uri()  . '/assets/blocks/imagen-texto-y-fondo/index.css', array(), $version, 'all');
-    // END: Registrar imagen-texto-y-fondo
-
-    // START: Registrar popup
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/popup');
-    $version = get_block_version('popup');
-    wp_register_script('popup-js', get_stylesheet_directory_uri()  . '/assets/blocks/popup/index.js', $version, true);
-    wp_register_style('popup-css', get_stylesheet_directory_uri()  . '/assets/blocks/popup/index.css', array(), $version, 'all');
-    
-    if (!$registro) {
-        error_log('No se pudo registrar el bloque');
-    }
-    // END: Registrar popup
-
-    // START: Registrar purpose
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/purpose');
-    $version = get_block_version('purpose');
-    wp_register_script('purpose-js', get_stylesheet_directory_uri()  . '/assets/blocks/purpose/index.js', $version, true);
-    wp_register_style('purpose-css', get_stylesheet_directory_uri()  . '/assets/blocks/purpose/index.css', array(), $version, 'all');
+    // END: section-banner
+    // START: page-about-us
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/page-about-us');
+    $version = get_block_version('page-about-us');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('page-about-us-css', get_stylesheet_directory_uri()  . '/assets/blocks/page-about-us/index.css', array(), $version, 'all'); */
 
     if (!$registro) {
         error_log('No se pudo registrar el bloque');
     }
-    // END: Registrar purpose
 
-    // START: Registrar line-history
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/line-history');
-    $version = get_block_version('line-history');
-    wp_register_script('line-history-js', get_stylesheet_directory_uri()  . '/assets/blocks/line-history/index.js', array("swiper"), $version);
-    wp_register_style('line-history-css', get_stylesheet_directory_uri()  . '/assets/blocks/line-history/index.css', array(), $version, 'all');
-
-    if (!$registro) {
-        error_log('No se pudo registrar el bloque');
-    }
-    // END: Registrar line-history
-
-    // START: Registrar methodology-block
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/methodology-block');
-    $version = get_block_version('methodology-block');
-    wp_register_script('methodology-block-js', get_stylesheet_directory_uri()  . '/assets/blocks/methodology-block/index.js', array("swiper"), $version);
-    wp_register_style('methodology-block-css', get_stylesheet_directory_uri()  . '/assets/blocks/methodology-block/index.css', array(), $version, 'all');
+    // END: page-about-us
+    // START: banner-cabecera
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/banner-cabecera');
+    $version = get_block_version('banner-cabecera');
+    /* wp_register_script('interest-section-js', get_stylesheet_directory_uri()  . '/assets/blocks/interest-section/index.js', $version, true); */
+    /* wp_register_style('banner-cabecera-css', get_stylesheet_directory_uri()  . '/assets/blocks/banner-cabecera/index.css', array(), $version, 'all'); */
 
     if (!$registro) {
         error_log('No se pudo registrar el bloque');
     }
-    // END: Registrar methodology-block
 
-    // START: Registrar slider-fr
-    $registro = register_block_type(get_stylesheet_directory() . '/blocks/slider-fr');
-    $version = get_block_version('slider-fr');
-    wp_register_script('slider-fr-js', get_stylesheet_directory_uri()  . '/assets/blocks/slider-fr/index.js', $version, true);
-    wp_register_style('slider-fr-css', get_stylesheet_directory_uri()  . '/assets/blocks/slider-fr/index.css', array(), $version, 'all');
+    // END: banner-cabecera
+
+    // START: blogs-list
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/blogs-list');
+    $version = get_block_version('blogs-list');
+    /* wp_register_script('blogs-list-js', get_stylesheet_directory_uri()  . '/assets/blocks/blogs-list/index.js', $version, true); */
+    /* wp_register_style('blogs-list-css', get_stylesheet_directory_uri()  . '/assets/blocks/blogs-list/index.css', array(), $version, 'all'); */
 
     if (!$registro) {
         error_log('No se pudo registrar el bloque');
     }
-    // END: Registrar slider-fr
 
-    
+    // END: blogs-list
+
+     // START: patients-materials
+     $registro = register_block_type(get_stylesheet_directory() . '/blocks/patients-materials');
+     $version = get_block_version('patients-materials');
+     /* wp_register_script('patients-materials-js', get_stylesheet_directory_uri()  . '/assets/blocks/patients-materials/index.js', $version, true); */
+     /* wp_register_style('patients-materials-css', get_stylesheet_directory_uri()  . '/assets/blocks/patients-materials/index.css', array(), $version, 'all'); */
+ 
+     if (!$registro) {
+         error_log('No se pudo registrar el bloque');
+     }
+ 
+     // END: patients-materials
+
+    // START: login-block
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/login-block');
+    $version = get_block_version('login-block');
+    wp_register_script('login-block-js', get_stylesheet_directory_uri()  . '/assets/blocks/login-block/index.js', $version, true);
+     /* wp_register_style('login-block-css', get_stylesheet_directory_uri()  . '/assets/blocks/login-block/index.css', array(), $version, 'all'); */
+
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque login-block');
+    }
+
+    // END: login-block
+
+    // START: user-profile
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/user-profile');
+    $version = get_block_version('user-profile');
+    wp_register_script('user-profile-js', get_stylesheet_directory_uri() . '/assets/blocks/user-profile/index.js', array(), $version, true);
+    wp_register_style('user-profile-css', get_stylesheet_directory_uri() . '/assets/blocks/user-profile/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque user-profile');
+    }
+    // END: user-profile
+    // START: regional
+    $registro = register_block_type(get_stylesheet_directory() . '/blocks/regional');
+    $version = get_block_version('regional');
+    wp_register_script('regional-js', get_stylesheet_directory_uri() . '/assets/blocks/regional/index.js', array(), $version, true);
+    wp_register_style('regional-css', get_stylesheet_directory_uri() . '/assets/blocks/regional/index.css', array(), $version, 'all');
+
+    if (!$registro) {
+        error_log('No se pudo registrar el bloque regional');
+    }
+    // END: regional
 }

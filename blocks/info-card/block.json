@@ -1,0 +1,14 @@
+{
+	"name": "acop/info-card",
+	"title": "Info-card",
+	"description": "Info-card Block",
+	"style": ["info-card-css"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "info-card.php"
+	}
+}

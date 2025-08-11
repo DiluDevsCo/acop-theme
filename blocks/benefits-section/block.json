@@ -1,0 +1,14 @@
+{
+	"name": "acop/benefits-section",
+	"title": "Benefits-section",
+	"description": "Benefits-section Block",
+	"style": ["benefits-section-css"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "benefits-section.php"
+	}
+}

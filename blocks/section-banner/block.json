@@ -1,0 +1,13 @@
+{
+  "name": "acop/section-banner",
+  "title": "Section-banner",
+  "description": "Section-banner Block",
+  "category": "formatting",
+  "icon": "book",
+  "version": "1.0.0",
+  "keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "section-banner.php"
+  }
+}

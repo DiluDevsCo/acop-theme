@@ -1,0 +1,29 @@
+/* Estilos para la animación del texto "ver" */
+.card-link .view-text {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .card-link:hover .view-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Estilos para la transición del gradiente */
+  .card-gradient {
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-gradient-hover {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-link:hover .card-gradient {
+    opacity: 0;
+  }
+  
+  .card-link:hover .card-gradient-hover {
+    opacity: 1;
+  }

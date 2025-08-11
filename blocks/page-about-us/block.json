@@ -1,0 +1,14 @@
+{
+	"name": "acop/page-about-us",
+	"title": "Page-about-us",
+	"description": "Page-about-us Block",
+	"style": ["page-about-us-css"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "page-about-us.php"
+	}
+}

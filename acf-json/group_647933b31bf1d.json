@@ -55,19 +55,7 @@
             },
             "choices": {
                 "blue": "Azul",
-                "blue-text-white": "Azul | texto blanco",
-                "green": "Verde",
-                "blue-outlined": "Blue Outlined",
-                "green-outlined": "Green Outlined",
-                "primary": "Primary",
-                "white": "Blanco",
-                "btn_login": "Botón login",
-                "purchase": "Botón compra",
-                "purple": "morado principal",
-                "purple-medium": "morado medio",
-                "purple-light": "morado claro",
-                "purple-text-white": "Morado | texto blanco",
-                "black-text-white": "Negro | texto blanco"
+                "green": "Verde"
             },
             "default_value": "blue",
             "return_format": "value",
@@ -148,5 +136,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715096425
+    "modified": 1742059457
 }

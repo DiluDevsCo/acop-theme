@@ -1,0 +1,15 @@
+{
+    "name": "acop/user-profile",
+    "title": "User Profile",
+    "description": "User Profile Block with LearnDash integration",
+    "style": ["user-profile-css"],
+    "script": ["user-profile-js"],
+    "category": "formatting",
+    "icon": "admin-users",
+    "version": "1.0.0",
+    "keywords": ["perfil", "usuario", "learndash", "cursos", "videos", "documentos"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "user-profile.php"
+    }
+}

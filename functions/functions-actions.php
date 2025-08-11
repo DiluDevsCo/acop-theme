@@ -87,3 +87,15 @@ function almus_init()
 {
   register_nav_menu('sidebar', 'Logged in sidebar');
 }
+
+// Cambiar las clases del body para forzar full width
+function modify_body_class($classes) {
+    // Remover clases de sidebar
+    $classes = array_diff($classes, array('et_right_sidebar', 'et_left_sidebar'));
+    
+    // Agregar clase de full width
+    $classes[] = 'et_full_width_page';
+    
+    return $classes;
+}
+add_filter('body_class', 'modify_body_class');

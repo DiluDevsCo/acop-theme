@@ -1,0 +1,14 @@
+{
+	"name": "acop/blogs-list",
+	"title": "blogs-list",
+	"description": "blogs-list",
+	"style": ["blogs-list-css"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["blogs-list", "card"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "blogs-list.php"
+	}
+}

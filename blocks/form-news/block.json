@@ -1,0 +1,14 @@
+{
+	"name": "acop/form-news",
+	"title": "form-news",
+	"description": "form-news Block",
+	"style": ["form-news-css"],
+  "category": "formatting",
+	"icon": "book",
+  "version": "1.0.0",
+	"keywords": ["Grid", "texto", "botones", "iconos", "imagen"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "form-news.php"
+	}
+}

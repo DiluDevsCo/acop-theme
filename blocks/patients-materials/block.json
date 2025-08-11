@@ -1,0 +1,14 @@
+{
+	"name": "acop/patients-materials",
+	"title": "patients-materials",
+	"description": "patients-materials",
+	"style": ["patients-materials-css"],
+  "category": "formatting",
+	"icon": "admin-comments",
+  "version": "1.0.0",
+	"keywords": ["patients-materials", "card"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "patients-materials.php"
+	}
+}

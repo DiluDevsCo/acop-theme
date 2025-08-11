@@ -1,3 +1,7 @@
 .is-root-container {
   padding: 20px;
 }
+nav.header-principal .menu-item a {
+  color: white !important;
+}
+
