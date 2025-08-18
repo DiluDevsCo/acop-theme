@@ -68,7 +68,9 @@ $tabs_data = [
                     
                     <!-- Miembros Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5 p-1 mt-5 max-h-96 overflow-y-auto pr-2">
-                        <?php foreach ($tab['data'] as $miembro): 
+                        <?php 
+                        $index = 0; // Contador para identificar la primera tarjeta
+                        foreach ($tab['data'] as $miembro): 
                             // Manejar TODAS las estructuras posibles de imagen de ACF
                             $imagen = null;
                             
@@ -85,8 +87,16 @@ $tabs_data = [
                             }
                             
                             $placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2NjYyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+U2luIGZvdG88L3RleHQ+PC9zdmc+';
+                            
+                            // Determinar la clase de fondo: primera tarjeta = presidenta (color más fuerte)
+                            $es_presidenta = ($index === 0);
+                            $bg_class = $es_presidenta 
+                                ? 'bg-[#5A3D82] hover:bg-[#4A2F6F]' // Color más fuerte para presidenta
+                                : 'bg-[#BEB3CC] hover:bg-[#9b89b3]'; // Color normal para otros miembros
+                            
+                            $text_color = $es_presidenta ? 'text-white' : 'text-black'; // Texto blanco para presidenta
                         ?>
-                            <div class="bg-[#BEB3CC] rounded-2xl p-5 flex gap-4 shadow-lg transition-all duration-300 min-h-30 items-center hover:-translate-y-1 hover:shadow-xl hover:bg-[#9b89b3]">
+                            <div class="<?php echo $bg_class; ?> rounded-2xl p-5 flex gap-4 shadow-lg transition-all duration-300 min-h-30 items-center hover:-translate-y-1 hover:shadow-xl">
                                 <!-- Imagen del miembro -->
                                 <div class="flex-shrink-0 border-8 border-[#5A3D82] border-solid rounded-full">
                                     <img src="<?php echo $imagen ?: $placeholder; ?>" 
@@ -96,21 +106,33 @@ $tabs_data = [
                                 
                                 <!-- Info del miembro -->
                                 <div class="flex-1">
-                                    <h4 class="m-0 mb-2 text-black text-base font-bold uppercase tracking-wide">
+                                    <?php if ($es_presidenta): ?>
+                                        <!-- Etiqueta especial para presidenta -->
+                                        <div class="mb-2">
+                                            <span class="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                                                Representante
+                                            </span>
+                                        </div>
+                                    <?php endif; ?>
+                                    
+                                    <h4 class="m-0 mb-2 <?php echo $text_color; ?> text-base font-bold uppercase tracking-wide">
                                         <?php echo esc_html($miembro['nombres_completos']); ?>
                                     </h4>
-                                    <p class="my-1 text-sm text-black font-medium">
+                                    <p class="my-1 text-sm <?php echo $text_color; ?> font-medium">
                                         <span class="font-bold">Contacto:</span> <?php echo esc_html($miembro['contacto']); ?>
                                     </p>
-                                    <p class="my-1 text-sm text-black font-medium">
+                                    <p class="my-1 text-sm <?php echo $text_color; ?> font-medium">
                                         <span class="font-bold">Ciudad:</span> <?php echo esc_html($miembro['ciudad']); ?>
                                     </p>
-                                    <p class="my-1 text-sm text-black font-medium">
+                                    <p class="my-1 text-sm <?php echo $text_color; ?> font-medium">
                                         <span class="font-bold">Regional:</span> <?php echo esc_html($miembro['regional']); ?>
                                     </p>
                                 </div>
                             </div>
-                        <?php endforeach; ?>
+                        <?php 
+                        $index++; // Incrementar contador
+                        endforeach; 
+                        ?>
                     </div>
                 <?php else: ?>
                     <div class="text-center py-10 text-gray-500">
