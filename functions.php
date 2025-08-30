@@ -32,6 +32,17 @@ function ajax_login_handler() {
     if (is_wp_error($user)) {
         wp_send_json_error(array('message' => 'Usuario o contraseña incorrectos.'));
     } else {
+        // Verificar si el usuario tiene el rol de miembros_inactivos
+        if (user_can($user, 'miembros_inactivos') || in_array('miembros_inactivos', $user->roles)) {
+            // Cerrar la sesión que se acaba de crear
+            wp_logout();
+            
+            wp_send_json_error(array(
+                'message' => 'Tu cuenta se encuentra temporalmente inactiva. Para reactivar tu membresía, por favor contacta con nuestro equipo de soporte.',
+                'error_type' => 'inactive_member'
+            ));
+        }
+        
         wp_send_json_success(array(
             'message' => '¡Inicio de sesión exitoso!',
             'redirect' => $redirect_to

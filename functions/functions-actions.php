@@ -99,3 +99,105 @@ function modify_body_class($classes) {
     return $classes;
 }
 add_filter('body_class', 'modify_body_class');
+
+// 1. Hook que se ejecuta en cada carga de página para usuarios logueados
+add_action('init', 'check_inactive_user_status');
+
+function check_inactive_user_status() {
+    // Solo ejecutar si el usuario está logueado
+    if (!is_user_logged_in()) {
+        return;
+    }
+    
+    // No ejecutar en admin-ajax para evitar conflictos
+    if (wp_doing_ajax()) {
+        return;
+    }
+    
+    // No ejecutar en el admin para permitir que administradores gestionen usuarios
+    if (is_admin() && !wp_doing_ajax()) {
+        return;
+    }
+    
+    $current_user = wp_get_current_user();
+    
+    // Verificar si el usuario tiene el rol de miembros_inactivos
+    if (user_can($current_user, 'miembros_inactivos') || in_array('miembros_inactivos', $current_user->roles)) {
+        // Desloguear al usuario
+        wp_logout();
+        
+        // Agregar mensaje de sesión cerrada
+        add_action('wp_footer', function() {
+            ?>
+            <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Crear overlay de notificación
+                    const overlay = document.createElement('div');
+                    overlay.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.8);
+                        z-index: 999999;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    `;
+                    
+                    const modal = document.createElement('div');
+                    modal.style.cssText = `
+                        background: white;
+                        padding: 2rem;
+                        border-radius: 1rem;
+                        max-width: 500px;
+                        margin: 1rem;
+                        text-align: center;
+                        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                    `;
+                    
+                    modal.innerHTML = `
+                        <div style="color: #f59e0b; font-size: 3rem; margin-bottom: 1rem;">⚠</div>
+                        <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">
+                            Sesión Cerrada
+                        </h3>
+                        <p style="color: #6b7280; margin-bottom: 1.5rem; line-height: 1.5;">
+                            Tu cuenta ha sido marcada como inactiva. Para reactivar tu membresía, 
+                            por favor contacta con nuestro equipo de soporte.
+                        </p>
+                        <button onclick="window.location.reload()" 
+                                style="background: #7c3aed; color: white; padding: 0.75rem 1.5rem; 
+                                       border: none; border-radius: 0.5rem; font-weight: 500; 
+                                       cursor: pointer; transition: all 0.2s;">
+                            Continuar
+                        </button>
+                    `;
+                    
+                    overlay.appendChild(modal);
+                    document.body.appendChild(overlay);
+                    
+                    // Agregar hover effect al botón
+                    const button = modal.querySelector('button');
+                    button.addEventListener('mouseenter', () => {
+                        button.style.background = '#6d28d9';
+                        button.style.transform = 'translateY(-1px)';
+                    });
+                    button.addEventListener('mouseleave', () => {
+                        button.style.background = '#7c3aed';
+                        button.style.transform = 'translateY(0)';
+                    });
+                });
+            </script>
+            <?php
+        });
+        
+        // Limpiar cookies y redirección
+        wp_clear_auth_cookie();
+        
+        // Log del evento (opcional)
+        error_log("Usuario inactivo deslogueado automáticamente: " . $current_user->user_login);
+        
+        return;
+    }
+}
