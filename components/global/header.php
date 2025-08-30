@@ -140,7 +140,7 @@ if (is_user_logged_in()) {
                 <?php echo $current_user->user_email; ?>
               </div>
             </div>
-            <a href="/perfil" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mi perfil</a>
+            <!-- <a href="/perfil" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mi perfil</a> -->
             <a href="<?php echo wp_logout_url('/'); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cerrar sesión</a>
           </div>
         </div>
